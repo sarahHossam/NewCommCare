@@ -1,0 +1,93 @@
+<div class="header-bar-dr">
+    <div class="row">
+      <div class="col-md-3 pages-path">
+        <div class="logo-for-dr"> Doctor
+          <span>
+            <a routerLink="/doctor-details/{{doctor.id}}" >wall </a>
+            <span class="var-page"> / Profile </span>
+          </span>
+        </div>
+      </div>
+  
+      <div class="col-md-8 ">
+        <ul class="list-inline social-links text-center right">
+          <!-- <li class="search-header">
+            <span class="glyphicon glyphicon-search " aria-hidden="true"> </span>
+  
+          </li> -->
+          <li>
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+  
+          </li>
+          <span class="badgee">4</span>
+          <li>
+            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+          </li>
+          <span class="badgee">4</span>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <span>
+                <img class=" img-circle img-profile" src="../../../assets/img/user-male-icon.png" width="50" height="40"> </span>
+              <span> Welcome, User</span>
+  
+              <span class="glyphicon glyphicon-menu-down downarrow-menu" aria-hidden="true"> </span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Setting</a>
+              </li>
+              <li>
+                <a href="#">Log out</a>
+              </li>
+  
+            </ul>
+          </li>
+        </ul>
+  
+  
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  
+    <div class="col-md-2">
+      <section class="menu-side">
+        <ul class="menu">
+  
+          <li title="Profile">
+            <a href="homepagedr.html" class=" active dashboard"> Profile</a>
+          </li>
+          <li title="Doctors">
+            <a href="doctors.html" class="doctors">Doctors</a>
+          </li>
+          <li title="Patients">
+            <a href="patients.html" class="patients">Patients</a>
+          </li>
+          <li title="Add-Prescription">
+            <a href="prescription.html" class=" add-prescription">Add-prescription</a>
+          </li>
+          <li title="events">
+            <a href="events.html" class="schedule">Events</a>
+          </li>
+          <li title="Appointment">
+            <a href="calender-doctor.html" class="appointment">Schedule</a>
+          </li>
+          <li title="Messages">
+            <a href="messages.html" class="messages">Messages</a>
+          </li>
+          <li title="Reports">
+            <a href="#" class="reports">Reports</a>
+          </li>
+  
+        </ul>
+  
+      </section>
+  
+    </div>
+    <div class="col-md-9">
+      <app-doctor-details></app-doctor-details>
+      <!-- <app-doctor-listings></app-doctor-listings> -->
+    </div>
+  
+  </div>
+ 
