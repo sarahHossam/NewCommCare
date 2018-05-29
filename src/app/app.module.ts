@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule , OnInit } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { EventsModule } from './events/events.module';
 import { FooterComponent } from './shared/footer-content/footer.component';
@@ -11,6 +10,8 @@ import { DoctorsModule } from './doctors/doctors.module';
 import { DepartmentsComponent } from 'src/app/departments/departments.component';
 import { HospitalHeaderComponent } from 'src/app/shared/hospital-header/hospital-header.component';
 import { HospitalFooterComponent } from 'src/app/shared/hospital-footer/hospital-footer.component';
+import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -18,17 +19,17 @@ import { HospitalFooterComponent } from 'src/app/shared/hospital-footer/hospital
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    HospitalHeaderComponent,
-    HospitalFooterComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     EventsModule,
     DepartmentsModule,
     DoctorsModule,
-    RouterModule.forRoot([
-      {path:"departments",component:DepartmentsComponent}
-    ])
+    SharedModule
+    // RouterModule.forRoot([
+    //   {path:'',component:DepartmentsComponent}
+    // ])
    ],
 
   providers: [DepartmentService],
