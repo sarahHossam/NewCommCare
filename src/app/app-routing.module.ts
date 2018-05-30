@@ -6,7 +6,10 @@ import { DoctorListingsComponent } from './doctors/doctor-listings/doctor-listin
 import { DoctorItemSmallComponent } from './doctors/doctor-item-small/doctor-item-small.component';
 import { AppComponent } from './app.component';
 import { DepartmentsComponent } from './departments/departments.component';
-import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
+import { HospitalHomeModule } from 'src/app/hospital-home/hospital-home.module';
+import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.component';
+import { DoctorsModule } from './doctors/doctors.module';
+
 
 @NgModule({
   imports: [
