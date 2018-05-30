@@ -7,6 +7,7 @@ import { DoctorItemSmallComponent } from './doctors/doctor-item-small/doctor-ite
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
+import { DepartmentsComponent } from './departments/departments.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { HomeModule } from './home/home.module';
     RouterModule.forRoot([
       { path:'home', component: HomeComponent},
       { path:'', redirectTo:'/home', pathMatch:'full'},
+      
     ])
   ],
   declarations: [],

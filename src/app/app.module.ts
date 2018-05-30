@@ -12,6 +12,7 @@ import { HospitalHeaderComponent } from 'src/app/shared/hospital-header/hospital
 import { HospitalFooterComponent } from 'src/app/shared/hospital-footer/hospital-footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
+import { Doctorservice } from './shared/services/doctor.service';
 
 
 @NgModule({
@@ -27,12 +28,10 @@ import { SharedModule } from './shared/shared.module';
     DepartmentsModule,
     DoctorsModule,
     SharedModule
-    // RouterModule.forRoot([
-    //   {path:'',component:DepartmentsComponent}
-    // ])
+  
    ],
 
-  providers: [DepartmentService],
+  providers: [DepartmentService, Doctorservice],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

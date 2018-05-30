@@ -6,12 +6,14 @@ import { HospitalFooterComponent } from 'src/app/shared/hospital-footer/hospital
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { DepartmentsModule } from '../departments/departments.module';
+import { DoctorsModule } from '../doctors/doctors.module';
 
 @NgModule({
   imports: [
     CommonModule,
     DepartmentsModule,
-    RouterModule
+    RouterModule,
+    DoctorsModule
   ],
   declarations: [
     MenuComponent,
@@ -21,7 +23,7 @@ import { DepartmentsModule } from '../departments/departments.module';
 exports:
 [
   HospitalHeaderComponent, 
-    HospitalFooterComponent,
+  HospitalFooterComponent,
 ]
 })
 export class SharedModule { }
