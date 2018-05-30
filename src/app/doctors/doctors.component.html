@@ -55,29 +55,29 @@
         <ul class="menu">
   
           <li title="Profile">
-            <a href="homepagedr.html" class=" active dashboard"> Profile</a>
+            <a routerLink="/profile" class=" active dashboard"> Profile</a>
           </li>
           <li title="Doctors">
-            <a href="doctors.html" class="doctors">Doctors</a>
+            <a routerLink="/doctors" class="doctors">Doctors</a>
           </li>
           <li title="Patients">
-            <a href="patients.html" class="patients">Patients</a>
+            <a routerLink="/" class="patients">Patients</a>
           </li>
           <li title="Add-Prescription">
-            <a href="prescription.html" class=" add-prescription">Add-prescription</a>
+            <a routerLink="/prescription" class=" add-prescription">Add-prescription</a>
           </li>
           <li title="events">
-            <a href="events.html" class="schedule">Events</a>
+            <a routerLink="/" class="schedule">Events</a>
           </li>
           <li title="Appointment">
-            <a href="calender-doctor.html" class="appointment">Schedule</a>
+            <a routerLink="/calendar" class="appointment">Schedule</a>
           </li>
           <li title="Messages">
-            <a href="messages.html" class="messages">Messages</a>
+            <a routerLink="/" class="messages">Messages</a>
           </li>
-          <li title="Reports">
+          <!-- <li title="Reports">
             <a href="#" class="reports">Reports</a>
-          </li>
+          </li> -->
   
         </ul>
   
@@ -85,7 +85,7 @@
   
     </div>
     <div class="col-md-9">
-      <!-- <app-doctor-details></app-doctor-details> -->
+      
       <router-outlet></router-outlet>
     </div>
   

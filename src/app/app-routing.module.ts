@@ -7,6 +7,7 @@ import { DoctorItemSmallComponent } from './doctors/doctor-item-small/doctor-ite
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
+import { DepartmentsComponent } from './departments/departments.component';
 import { HospitalHomeModule } from 'src/app/hospital-home/hospital-home.module';
 import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.component';
 
@@ -18,6 +19,7 @@ import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.compo
     RouterModule.forRoot([
       { path:'home', component: HospitalHomeComponent},
       { path:'', redirectTo:'/home', pathMatch:'full'}
+
     ])
   ],
   declarations: [],

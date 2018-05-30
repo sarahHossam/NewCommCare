@@ -7,14 +7,16 @@ import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { DepartmentsModule } from '../departments/departments.module';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { DoctorsModule } from '../doctors/doctors.module';
 
 @NgModule({
   imports: [
     CommonModule,
     DepartmentsModule,
+    DoctorsModule,
     RouterModule.forChild([
       {path:'contactUs', component: ContactUsComponent}
-    ]),
+    ])
   ],
   declarations: [
     MenuComponent,
@@ -24,7 +26,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 exports:
 [
   HospitalHeaderComponent, 
-    HospitalFooterComponent,
+  HospitalFooterComponent,
 ]
 })
 export class SharedModule { }

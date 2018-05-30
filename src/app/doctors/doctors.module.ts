@@ -10,17 +10,20 @@ import { FullCalendarModule } from 'ng-fullcalendar';
 import { CalendarService } from '../shared/Services/CalendarService/Calendar.service';
 import { RouterModule, Routes } from '@angular/router';
 
-const doctorRoutes:Routes = [
-  {path: "doctor-details", component: DoctorDetailsComponent},
-  {path: "doctor-add", component: DoctorAddComponent},
-  {path: "doctor-calender", component: DoctorCalendarComponent},
-  {path: "doctor-listing", component: DoctorListingsComponent},
-]
 @NgModule({
   imports: [
     CommonModule,
     FullCalendarModule,
-    RouterModule.forChild(doctorRoutes)
+    RouterModule.forChild([
+      {path: "Home", children :[
+        {path:'', component: DoctorListingsComponent },
+        {path:'profile/:id',component:DoctorDetailsComponent},
+        {path:'add',component:DoctorAddComponent},
+        {path:'calendar', component:DoctorCalendarComponent},
+        // {path:'Home/:id', component:DoctorsComponent}
+        
+      ]},
+    ])
   ],
   declarations: 
   [
@@ -33,7 +36,8 @@ const doctorRoutes:Routes = [
 ],
 exports:[
   DoctorsComponent,
-  DoctorCalendarComponent
+  DoctorCalendarComponent,
+  RouterModule
 ],
 providers:
 [
