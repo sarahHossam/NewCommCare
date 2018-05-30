@@ -2,17 +2,15 @@ import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { DepartmentsComponent } from './departments/departments.component';
 import { HospitalHomeModule } from 'src/app/hospital-home/hospital-home.module';
 import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.component';
-import { DoctorsModule } from './doctors/doctors.module';
 import { DepartmentsModule } from './departments/departments.module';
-
+import { DoctorsModule } from 'src/app/doctors/doctors.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    HospitalHomeComponent,
+    HospitalHomeModule,
     DepartmentsModule,
     DoctorsModule,
     RouterModule.forRoot([

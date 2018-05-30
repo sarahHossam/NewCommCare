@@ -11,8 +11,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      {path:"departments", children:[
+      {path:"departments", component: DepartmentsComponent, children:[
         {path:'', component: ListingComponent },
+        {path:'listing', component: ListingComponent },
         {path:'details/:id',component:DetailsComponent},
         {path:'add',component:AddComponent}
       ]},
