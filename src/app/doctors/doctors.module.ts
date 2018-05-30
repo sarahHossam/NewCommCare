@@ -9,18 +9,22 @@ import { DoctorCalendarComponent } from './doctor-calendar/doctor-calendar.compo
 import { FullCalendarModule } from 'ng-fullcalendar';
 import { CalendarService } from '../shared/Services/CalendarService/Calendar.service';
 import { RouterModule, Routes } from '@angular/router';
+import { PrescriptionComponent } from '../prescription/prescription.component';
+import { PrescriptionModule } from '../prescription/prescription.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FullCalendarModule,
+    PrescriptionModule,
     RouterModule.forChild([
-      {path: "Home", children :[
+      {path: "Home", component:DoctorsComponent ,children :[
         {path:'', component: DoctorListingsComponent },
+        {path:'doctors', component: DoctorListingsComponent },
         {path:'profile/:id',component:DoctorDetailsComponent},
         {path:'add',component:DoctorAddComponent},
         {path:'calendar', component:DoctorCalendarComponent},
-        // {path:'Home/:id', component:DoctorsComponent}
+        {path:'/prescription', component:PrescriptionComponent}
         
       ]},
     ])
