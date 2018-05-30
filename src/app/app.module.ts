@@ -15,11 +15,12 @@ import { SharedModule } from './shared/shared.module';
 import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
     
   ],
   imports: [

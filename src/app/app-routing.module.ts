@@ -17,7 +17,7 @@ import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.compo
     HospitalHomeModule,
     RouterModule.forRoot([
       { path:'home', component: HospitalHomeComponent},
-      { path:'', redirectTo:'/home', pathMatch:'full'},
+      { path:'', redirectTo:'/home', pathMatch:'full'}
     ])
   ],
   declarations: [],
