@@ -5,17 +5,12 @@ import { DoctorDetailsComponent } from './doctors/doctor-details/doctor-details.
 import { DoctorListingsComponent } from './doctors/doctor-listings/doctor-listings.component';
 import { DoctorItemSmallComponent } from './doctors/doctor-item-small/doctor-item-small.component';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HomeModule } from './home/home.module';
 import { DepartmentsComponent } from './departments/departments.component';
-import { HospitalHomeModule } from 'src/app/hospital-home/hospital-home.module';
-import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.component';
+import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    HomeModule,
-    HospitalHomeModule,
     RouterModule.forRoot([
       { path:'home', component: HospitalHomeComponent},
       { path:'', redirectTo:'/home', pathMatch:'full'},

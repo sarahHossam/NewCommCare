@@ -7,6 +7,8 @@ import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { DepartmentsModule } from '../departments/departments.module';
 import { DoctorsModule } from '../doctors/doctors.module';
+import { HospitalAboutUsComponent } from './hospital-About-Us/hospital-About-Us.component';
+import { HospitalLoginComponent } from './hospital-login/hospital-login.component';
 
 @NgModule({
   imports: [
@@ -18,7 +20,9 @@ import { DoctorsModule } from '../doctors/doctors.module';
   declarations: [
     MenuComponent,
     HospitalHeaderComponent, 
-    HospitalFooterComponent,    
+    HospitalFooterComponent,    ,
+    HospitalAboutUsComponent,
+    HospitalLoginComponent
 ],
 exports:
 [
