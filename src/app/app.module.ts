@@ -13,13 +13,15 @@ import { HospitalFooterComponent } from 'src/app/shared/hospital-footer/hospital
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { Doctorservice } from './shared/services/doctor.service';
+import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent,
+    HeaderComponent
+    
   ],
   imports: [
     BrowserModule,

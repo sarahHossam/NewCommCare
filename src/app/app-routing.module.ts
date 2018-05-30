@@ -8,13 +8,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
 import { DepartmentsComponent } from './departments/departments.component';
+import { HospitalHomeModule } from 'src/app/hospital-home/hospital-home.module';
+import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.component';
 
 @NgModule({
   imports: [
     CommonModule,
     HomeModule,
+    HospitalHomeModule,
     RouterModule.forRoot([
-      { path:'home', component: HomeComponent},
+      { path:'home', component: HospitalHomeComponent},
       { path:'', redirectTo:'/home', pathMatch:'full'},
       
     ])

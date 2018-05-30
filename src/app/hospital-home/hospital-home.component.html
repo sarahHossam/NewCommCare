@@ -1,0 +1,12 @@
+<div class="body">
+  <div role="main" class="main">
+    <app-slider></app-slider>
+    <section class="p-xlg">
+      <div class="container">
+        <app-about></app-about>
+        <app-department-item-small *ngFor="let dept of departments" [department]="dept"></app-department-item-small>
+      </div>
+    </section>
+    <app-quote></app-quote>
+  </div>
+</div>
