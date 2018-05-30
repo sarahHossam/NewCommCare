@@ -13,8 +13,8 @@ import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
     CommonModule,
     RouterModule.forRoot([
       { path:'home', component: HospitalHomeComponent},
-      { path:'', redirectTo:'/home', pathMatch:'full'},
-      
+      { path:'', redirectTo:'/home', pathMatch:'full'}
+
     ])
   ],
   declarations: [],

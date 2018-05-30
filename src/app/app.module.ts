@@ -16,11 +16,12 @@ import { Doctorservice } from './shared/services/doctor.service';
 import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
     
   ],
   imports: [
