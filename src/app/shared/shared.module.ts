@@ -21,7 +21,8 @@ import { DoctorsModule } from '../doctors/doctors.module';
   declarations: [
     MenuComponent,
     HospitalHeaderComponent, 
-    HospitalFooterComponent, ContactUsComponent,    
+    HospitalFooterComponent,
+    ContactUsComponent    
 ],
 exports:
 [
