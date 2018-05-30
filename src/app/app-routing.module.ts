@@ -19,7 +19,7 @@ import { DoctorsModule } from 'src/app/doctors/doctors.module';
 
     ])
   ],
-  declarations: [],
+  declarations: [HospitalHomeComponent],
   exports:[ RouterModule]
 
 })
