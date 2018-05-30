@@ -10,12 +10,15 @@ import { HomeModule } from './home/home.module';
 import { DepartmentsComponent } from './departments/departments.component';
 import { HospitalHomeModule } from 'src/app/hospital-home/hospital-home.module';
 import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.component';
+import { DoctorsModule } from './doctors/doctors.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     HomeModule,
     HospitalHomeModule,
+    DoctorsModule,
     RouterModule.forRoot([
       { path:'home', component: HospitalHomeComponent},
       { path:'', redirectTo:'/home', pathMatch:'full'}
