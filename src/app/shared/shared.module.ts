@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { DepartmentsModule } from '../departments/departments.module';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DoctorsModule } from '../doctors/doctors.module';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { DoctorsModule } from '../doctors/doctors.module';
     MenuComponent,
     HospitalHeaderComponent, 
     HospitalFooterComponent,
-    ContactUsComponent    
+    ContactUsComponent,
+    AboutUsComponent    
 ],
 exports:
 [

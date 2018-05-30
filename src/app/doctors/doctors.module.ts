@@ -11,6 +11,7 @@ import { CalendarService } from '../shared/Services/CalendarService/Calendar.ser
 import { RouterModule, Routes } from '@angular/router';
 import { PrescriptionComponent } from '../prescription/prescription.component';
 import { PrescriptionModule } from '../prescription/prescription.module';
+import { Component } from '@angular/core/src/metadata/directives';
 
 @NgModule({
   imports: [
@@ -18,14 +19,13 @@ import { PrescriptionModule } from '../prescription/prescription.module';
     FullCalendarModule,
     PrescriptionModule,
     RouterModule.forChild([
-      {path: "Home", component:DoctorsComponent ,children :[
-        {path:'', component: DoctorListingsComponent },
-        {path:'doctors', component: DoctorListingsComponent },
-        {path:'profile/:id',component:DoctorDetailsComponent},
+        {path:'listing',component:DoctorListingsComponent},
+        {path: "doctorsProfile" ,component:DoctorsComponent,children :[
+        {path:'', component: DoctorDetailsComponent },
+        {path:'doctors', redirectTo:"/listing" ,pathMatch:'full'},
         {path:'add',component:DoctorAddComponent},
         {path:'calendar', component:DoctorCalendarComponent},
-        {path:'/prescription', component:PrescriptionComponent}
-        
+        {path:'prescription', component:PrescriptionComponent} 
       ]},
     ])
   ],
