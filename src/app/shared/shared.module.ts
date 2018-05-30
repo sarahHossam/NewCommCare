@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { DepartmentsModule } from '../departments/departments.module';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DoctorsModule } from '../doctors/doctors.module';
+import { HospitalLoginComponent } from './hospital-login/hospital-login.component';
 
 @NgModule({
   imports: [
@@ -15,13 +16,14 @@ import { DoctorsModule } from '../doctors/doctors.module';
     DepartmentsModule,
     DoctorsModule,
     RouterModule.forChild([
-      {path:'contactUs', component: ContactUsComponent}
+      {path:'contactUs', component: ContactUsComponent},
+      {path:'login', component: HospitalLoginComponent}
     ])
   ],
   declarations: [
     MenuComponent,
     HospitalHeaderComponent, 
-    HospitalFooterComponent, ContactUsComponent,    
+    HospitalFooterComponent, ContactUsComponent, HospitalLoginComponent   
 ],
 exports:
 [

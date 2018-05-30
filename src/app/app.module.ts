@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { Doctorservice } from './shared/services/doctor.service';
 import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
+import { HospitalHomeModule } from './hospital-home/hospital-home.module';
 
 
 
@@ -30,7 +31,8 @@ import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
     EventsModule,
     DepartmentsModule,
     DoctorsModule,
-    SharedModule
+    SharedModule,
+    HospitalHomeModule
   
    ],
 
