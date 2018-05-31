@@ -1,5 +1,5 @@
 <div class="row mt-lg">
-        <div class="header-search hidden-xs">
+       <!--  <div class="header-search hidden-xs">
     <form id="searchForm" method="post">
         <div class="input-group">
             <input type="text" value="" class="form-control" name="textSearch" id="q" placeholder="Search..." required>
@@ -9,12 +9,12 @@
                 </button>
             </span>
             <span>
-                <a href="#" routerLink="/add">
+                <a routerLink="/add">
                     <i class="fa fa-plus"></i>
                 </a>
             </span>
         </div>
     </form>
-    </div>
+    </div> -->
     <app-department-item-small *ngFor="let dept of departments" [department]="dept"></app-department-item-small>
 </div>
