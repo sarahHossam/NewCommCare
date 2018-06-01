@@ -24,7 +24,7 @@ import { PrescriptionModule } from '../prescription/prescription.module';
         {path:'profile/:id',component:DoctorDetailsComponent},
         {path:'add',component:DoctorAddComponent},
         {path:'calendar', component:DoctorCalendarComponent},
-        {path:'/prescription', component:PrescriptionComponent}
+        {path:'prescription', component:PrescriptionComponent}
         
       ]},
     ])
