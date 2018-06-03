@@ -19,35 +19,38 @@ import { Component } from '@angular/core/src/metadata/directives';
     FullCalendarModule,
     PrescriptionModule,
     RouterModule.forChild([
-        {path:'listing',component:DoctorListingsComponent},
-        {path: "doctorsProfile" ,component:DoctorsComponent,children :[
-        {path:'', component: DoctorDetailsComponent },
-        {path:'doctors', redirectTo:"/listing" ,pathMatch:'full'},
-        {path:'add',component:DoctorAddComponent},
-        {path:'calendar', component:DoctorCalendarComponent},
-        {path:'prescription', component:PrescriptionComponent}
-        {path:'prescription', component:PrescriptionComponent} 
-      ]},
+      { path: 'doctors/:categoryname', component: DoctorListingsComponent },
+
+      { path: "doctorProfile/:id", component: DoctorsComponent, children: [
+          { path: '', component: DoctorDetailsComponent },
+          { path: 'ddoctors', component:DoctorListingsComponent },
+          { path: 'add', component: DoctorAddComponent },
+          { path: 'calendar', component: DoctorCalendarComponent },
+          { path: 'prescription', component: PrescriptionComponent },
+          
+          
+        ]
+      },
     ])
   ],
-  declarations: 
-  [
+  declarations:
+    [
+      DoctorsComponent,
+      DoctorDetailsComponent,
+      DoctorListingsComponent,
+      DoctorAddComponent,
+      DoctorItemSmallComponent,
+      DoctorCalendarComponent
+    ],
+  exports: [
     DoctorsComponent,
-    DoctorDetailsComponent,
-    DoctorListingsComponent,
-    DoctorAddComponent,
-    DoctorItemSmallComponent,
-    DoctorCalendarComponent
-],
-exports:[
-  DoctorsComponent,
-  DoctorCalendarComponent,
-  RouterModule
-],
-providers:
-[
-  CalendarService,
-]
+    DoctorCalendarComponent,
+    RouterModule
+  ],
+  providers:
+    [
+      CalendarService,
+    ]
 
 })
 export class DoctorsModule { }

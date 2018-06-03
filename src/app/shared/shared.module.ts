@@ -24,7 +24,8 @@ import { HospitalLoginComponent } from './hospital-login/hospital-login.componen
     MenuComponent,
     HospitalHeaderComponent, 
     HospitalFooterComponent,
-    ContactUsComponent    
+    ContactUsComponent   ,
+    HospitalLoginComponent 
 ],
 exports:
 [

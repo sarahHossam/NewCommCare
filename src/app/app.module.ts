@@ -15,6 +15,8 @@ import { SharedModule } from './shared/shared.module';
 import { Doctorservice } from './shared/services/doctor.service';
 import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
 import { HospitalHomeModule } from './hospital-home/hospital-home.module';
+import { DoctorCategoryModule } from './doctorCategory/doctorCategory.module';
+
 
 
 
@@ -24,6 +26,7 @@ import { HospitalHomeModule } from './hospital-home/hospital-home.module';
     FooterComponent,
     HeaderComponent,
     
+    
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,9 @@ import { HospitalHomeModule } from './hospital-home/hospital-home.module';
     DepartmentsModule,
     DoctorsModule,
     SharedModule,
-    HospitalHomeModule
+    HospitalHomeModule,
+    DoctorCategoryModule
+   
   
    ],
 
