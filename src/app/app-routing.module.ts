@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HospitalHomeModule } from 'src/app/hospital-home/hospital-home.module';
-import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.component';
 import { DepartmentsModule } from './departments/departments.module';
 import { DoctorsModule } from 'src/app/doctors/doctors.module';
+import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.component';
 
 @NgModule({
   imports: [
@@ -19,7 +19,7 @@ import { DoctorsModule } from 'src/app/doctors/doctors.module';
 
     ])
   ],
-  declarations: [HospitalHomeComponent],
+  declarations: [],
   exports:[ RouterModule]
 
 })

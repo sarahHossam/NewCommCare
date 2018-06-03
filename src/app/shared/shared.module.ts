@@ -23,7 +23,8 @@ import { HospitalLoginComponent } from './hospital-login/hospital-login.componen
   declarations: [
     MenuComponent,
     HospitalHeaderComponent, 
-    HospitalFooterComponent, ContactUsComponent, HospitalLoginComponent   
+    HospitalFooterComponent,
+    ContactUsComponent    
 ],
 exports:
 [
