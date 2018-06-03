@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { Doctorservice } from './shared/services/doctor.service';
 import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -26,6 +27,7 @@ import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     EventsModule,
     DepartmentsModule,
