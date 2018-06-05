@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-9">
+          <div class="row filter-patient ">
+            <div class="col-md-12">
+              <h3> listing patients </h3>
+              <form id="propertiesForm" action="demo-real-estate-properties.html" method="POST">
+                <div class="row">
+                  <div class="col-md-2">
+                    <div class="form-control-custom mb-md">
+                      <select class="form-control text-uppercase font-size-sm" name="propertiesPropertyType" data-msg-required="This field is required."
+                       id="propertiesPropertyType" required="">
+                        <option value=""> Doctor name</option>
+                        <option value="1">sara</option>
+                        <option value="2">hossam</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="form-control-custom mb-md">
+                      <select class="form-control text-uppercase font-size-sm" name="propertiesLocation" data-msg-required="This field is required."
+                       id="propertiesLocation" required="">
+                        <option value="">Location</option>
+                        <option value="1">abc</option>
+                        <option value="2">el salam York</option>
+                        <option value="3">haram</option>
+    
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="form-control-custom mb-md">
+                      <select class="form-control text-uppercase font-size-sm" name="propertiesMinBeds" data-msg-required="This field is required."
+                       id="propertiesMinBeds" required="">
+                        <option value="">patient name</option>
+                        <option value="1">sara</option>
+                        <option value="2">sarah</option>
+                        <option value="3">hossam</option>
+                        <option value="4">mounir</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <input type="submit" value="Search Now" class="btn btn-primary btn-lg btn-block text-uppercase font-size-sm">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+    
+          <div class="row patients-block">
+            <app-patient-item-small *ngFor="let patient of patients" [patient]="patient"></app-patient-item-small>
+          </div>
+        </div>
+  </div>
+</div>

@@ -11,21 +11,21 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      {path:"departments", children:[
-        {path:'', component: ListingComponent },
-        {path:'details/:id',component:DetailsComponent},
-        {path:'add',component:AddComponent}
+      {path: 'departments', children: [
+        {path: '', component: ListingComponent },
+        {path: 'details/:id', component: DetailsComponent},
+        {path: 'add', component: AddComponent}
       ]},
     ])
   ],
   declarations: [
-    ListingComponent, 
-    DetailsComponent, 
-    AddComponent, 
+    ListingComponent,
+    DetailsComponent,
+    AddComponent,
     DepartmentItemSmallComponent,
     DepartmentsComponent
   ],
-  exports:[
+  exports: [
     DepartmentsComponent,
     RouterModule
   ]
