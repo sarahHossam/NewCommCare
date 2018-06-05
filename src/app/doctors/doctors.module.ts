@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DoctorsComponent } from './doctors.component';
+import { DoctorComponent } from './doctors.component';
 import { DoctorDetailsComponent } from './doctor-details/doctor-details.component';
 import { DoctorListingsComponent } from './doctor-listings/doctor-listings.component';
 import { DoctorAddComponent } from './doctor-add/doctor-add.component';
@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'angular-calendar';
 import { NgbModalModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CalendarUtilsModule } from '../calendar-utils/calendar-utils.module';
+import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-calendar.component';
 
 
 @NgModule({
@@ -28,50 +29,39 @@ import { CalendarUtilsModule } from '../calendar-utils/calendar-utils.module';
     CalendarModule.forRoot(),
     NgbModalModule.forRoot(),
     RouterModule.forChild([
-        {path:'listing',component:DoctorListingsComponent},
-        {path: "doctorsProfile" ,component:DoctorsComponent,children :[
-        {path:'', component: DoctorDetailsComponent },
-        {path:'doctors', redirectTo:"/listing" ,pathMatch:'full'},
-        {path:'add',component:DoctorAddComponent},
-        {path:'calendar', component:DoctorCalendarComponent},
-        {path:'prescription', component:PrescriptionComponent},
-        {path:'prescription', component:PrescriptionComponent} 
-      ]},
-
       { path: 'doctors/:categoryname', component: DoctorListingsComponent },
       { path: 'doctors', component: DoctorListingsComponent },
-      { path: "doctorProfile/:id", component: DoctorsComponent, children: [
+      {
+        path: "doctorProfile/:id", component: DoctorComponent, children: [
           { path: '', component: DoctorDetailsComponent },
-          { path: 'ddoctors', component:DoctorListingsComponent },
+          { path: 'ddoctors', component: DoctorListingsComponent },
           { path: 'add', component: DoctorAddComponent },
-          { path: 'calendar', component: DoctorCalendarComponent },
           { path: 'prescription', component: PrescriptionComponent },
-          
-          
+          { path: 'calendar', component: DoctorCalendarComponent },
+          { path: 'calendar/edit', component: EditCalendarComponent }
         ]
       },
     ])
   ],
   declarations:
     [
-      DoctorsComponent,
+      DoctorComponent,
       DoctorDetailsComponent,
       DoctorListingsComponent,
       DoctorAddComponent,
       DoctorItemSmallComponent,
-      DoctorCalendarComponent
+      DoctorCalendarComponent,
+      EditCalendarComponent
     ],
   exports: [
-    DoctorsComponent,
+    DoctorComponent,
     DoctorDetailsComponent,
     DoctorListingsComponent,
     DoctorAddComponent,
     DoctorItemSmallComponent,
-    DoctorCalendarComponent
-],
-exports:[
-  DoctorsComponent,
-  RouterModule
-],
+    DoctorCalendarComponent,
+    EditCalendarComponent
+  ],
+
 })
 export class DoctorsModule { }
