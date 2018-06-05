@@ -2,7 +2,7 @@
 
 .menu {
     position: fixed;
-    top: 134px;
+    top: 179px;
     left: 0;
     height: 100vh;
     list-style-type: none;
@@ -119,8 +119,8 @@
 /* _________________________________header-bar____________________________________- */
 .header-bar{
 background-color: #008fe2;
-height: 57px;
-margin-top: 55px;
+height: 54px;
+margin-top: -25px;
 }
 .header-bar .pages-path div{
 

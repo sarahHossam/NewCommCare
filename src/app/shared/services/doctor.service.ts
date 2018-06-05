@@ -24,7 +24,7 @@ export class Doctorservice{
             {
                 id:3,
                 name:'dina',
-                speciality:'dentist doctor',
+                speciality:'batna doctor',
                 detailedDesc:'it is a detailed description about nutrition',
                 photo:'../../../assets//img/demos/restaurant/blog/blog-restaurant-1.png'  
             }
@@ -45,5 +45,10 @@ export class Doctorservice{
         const i=this.doctors.findIndex(b=>b.id == id);
         return this.doctors[i];
     }
+    public getBySpeciality(name: string):Idoctor[]{
+        const i=this.doctors.filter(b=>b.speciality.replace(/\s/g,'') == name);
+        console.log(i);
+        return i;
+      }
 
 }

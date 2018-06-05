@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { Idoctor } from '../shared/interfaces/idoctor';
 
 @Component({
   selector: 'app-doctors',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doctors.component.css']
 })
 export class DoctorsComponent implements OnInit {
-
+  @Input() doctor: Idoctor;
   constructor() { }
 
   ngOnInit() {

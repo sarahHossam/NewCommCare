@@ -37,10 +37,31 @@ import { CalendarUtilsModule } from '../calendar-utils/calendar-utils.module';
         {path:'prescription', component:PrescriptionComponent},
         {path:'prescription', component:PrescriptionComponent} 
       ]},
+
+      { path: 'doctors/:categoryname', component: DoctorListingsComponent },
+      { path: 'doctors', component: DoctorListingsComponent },
+      { path: "doctorProfile/:id", component: DoctorsComponent, children: [
+          { path: '', component: DoctorDetailsComponent },
+          { path: 'ddoctors', component:DoctorListingsComponent },
+          { path: 'add', component: DoctorAddComponent },
+          { path: 'calendar', component: DoctorCalendarComponent },
+          { path: 'prescription', component: PrescriptionComponent },
+          
+          
+        ]
+      },
     ])
   ],
-  declarations: 
-  [
+  declarations:
+    [
+      DoctorsComponent,
+      DoctorDetailsComponent,
+      DoctorListingsComponent,
+      DoctorAddComponent,
+      DoctorItemSmallComponent,
+      DoctorCalendarComponent
+    ],
+  exports: [
     DoctorsComponent,
     DoctorDetailsComponent,
     DoctorListingsComponent,
@@ -52,9 +73,5 @@ exports:[
   DoctorsComponent,
   RouterModule
 ],
-providers:
-[
-]
-
 })
 export class DoctorsModule { }

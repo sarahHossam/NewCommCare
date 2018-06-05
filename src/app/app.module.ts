@@ -15,14 +15,15 @@ import { SharedModule } from './shared/shared.module';
 import { Doctorservice } from './shared/services/doctor.service';
 import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
+import { HospitalHomeModule } from './hospital-home/hospital-home.module';
+import { DoctorCategoryModule } from './doctorCategory/doctorCategory.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
+    
     
   ],
   imports: [
@@ -32,7 +33,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EventsModule,
     DepartmentsModule,
     DoctorsModule,
-    SharedModule
+    SharedModule,
+    HospitalHomeModule,
+    DoctorCategoryModule
+   
   
    ],
 

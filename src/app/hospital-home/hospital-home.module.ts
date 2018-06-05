@@ -13,6 +13,7 @@ import { DepartmentsModule } from 'src/app/departments/departments.module';
     SharedModule,
     DepartmentsModule
   ],
-  declarations: [HospitalHomeComponent, SliderComponent, AboutComponent, QuoteComponent]
+  declarations: [HospitalHomeComponent, SliderComponent, AboutComponent, QuoteComponent],
+  exports:[HospitalHomeComponent]
 })
 export class HospitalHomeModule { }
