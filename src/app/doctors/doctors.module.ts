@@ -20,7 +20,7 @@ import { Component } from '@angular/core/src/metadata/directives';
     PrescriptionModule,
     RouterModule.forChild([
       { path: 'doctors/:categoryname', component: DoctorListingsComponent },
-
+      { path: 'doctors', component: DoctorListingsComponent },
       { path: "doctorProfile/:id", component: DoctorsComponent, children: [
           { path: '', component: DoctorDetailsComponent },
           { path: 'ddoctors', component:DoctorListingsComponent },

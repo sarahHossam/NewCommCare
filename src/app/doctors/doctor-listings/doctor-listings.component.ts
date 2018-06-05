@@ -4,6 +4,7 @@ import { Doctorservice } from '../../shared/services/doctor.service';
 import { Category } from '../../shared/interfaces/icategory';
 import { DoctorcategoryService } from '../../shared/services/doctorcategory.service';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-doctor-listings',
@@ -11,27 +12,21 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./doctor-listings.component.css']
 })
 export class DoctorListingsComponent implements OnInit {
-  @Input() doctors:Idoctor[];
-  category:Category;
-   constructor(private docservice:Doctorservice, private activeRoute: ActivatedRoute) { 
-    this.category = new Category();
-    console.log(this.category);
-    this.activeRoute.queryParams.subscribe((params) => {
-      console.log(params)
-      this.category.categoryname = params['categoryname'];
-      console.log(this.category.categoryname);
-      // if(this.category.categoryname){
-      //   this.doctors = this.docservice.getBySpeciality(this.category.categoryname)
-      // }
-      // else{
-      //   this.doctors = this.docservice.getAll();
-      // }
-      // console.log(this.doctors);
-    });
-  }
-  
-  ngOnInit() {
+  @Input() doctors: Idoctor[];
+  category: Category;
+  constructor(private docservice: Doctorservice, private activeRoute: ActivatedRoute) {
     
+  }
+
+  ngOnInit() {
+    this.category = new Category();
+    this.category.categoryname = this.activeRoute.snapshot.params.categoryname;
+    if (this.category.categoryname) {
+      this.doctors = this.docservice.getBySpeciality(this.category.categoryname);
+    }
+    else {
+      this.doctors = this.docservice.getAll();
+    }
   }
 
 }

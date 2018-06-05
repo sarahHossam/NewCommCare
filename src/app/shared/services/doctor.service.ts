@@ -46,7 +46,7 @@ export class Doctorservice{
         return this.doctors[i];
     }
     public getBySpeciality(name: string):Idoctor[]{
-        const i=this.doctors.filter(b=>b.speciality == name);
+        const i=this.doctors.filter(b=>b.speciality.replace(/\s/g,'') == name);
         console.log(i);
         return i;
       }
