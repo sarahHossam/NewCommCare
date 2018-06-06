@@ -6206,7 +6206,7 @@ section.timeline .timeline-box .owl-carousel {
 
 .social-icons li {
 	display: inline-block;
-	margin: -1px 1px 5px 0;
+	margin: 0px 0px 5px 0;
 	padding: 0;
 	border-radius: 100%;
 	overflow: visible;
@@ -6220,8 +6220,8 @@ section.timeline .timeline-box .owl-carousel {
 	background: #FFF;
 	border-radius: 100%;
 	display: block;
-	height: 30px;
-	line-height: 30px;
+	height: 34px;
+	line-height: 35px;
 	width: 30px;
 	text-align: center;
 	color: #333 !important;

@@ -1,97 +1,44 @@
-<div class="header-bar-dr">
-    <div class="row">
-      <div class="col-md-3 pages-path">
-        <div class="logo-for-dr"> Doctor
-          <span>
-            <a >wall </a>
-            <span class="var-page"> / Profile </span>
-          </span>
-        </div>
-      </div>
-  
-      <div class="col-md-8 ">
-        <ul class="list-inline social-links text-center right">
-          <!-- <li class="search-header">
-            <span class="glyphicon glyphicon-search " aria-hidden="true"> </span>
-  
-          </li> -->
-          <li>
-            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-  
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-2">
+      <section class="menu-side">
+        <ul class="menu">
+
+          <li title="Profile">
+            <a routerLink="/doctorProfile/{{doctor.id}}" class=" active dashboard"> Profile</a>
           </li>
-          <span class="badgee">4</span>
-          <li>
-            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+          <li title="Doctors">
+            <a routerLink="/doctorProfile/{{doctor.id}}/ddoctors" class="doctors">Doctors</a>
           </li>
-          <span class="badgee">4</span>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-              <span>
-                <img class=" img-circle img-profile" src="../../../assets/img/user-male-icon.png" width="50" height="40"> </span>
-              <span> Welcome, User</span>
-  
-              <span class="glyphicon glyphicon-menu-down downarrow-menu" aria-hidden="true"> </span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Setting</a>
-              </li>
-              <li>
-                <a href="#">Log out</a>
-              </li>
-  
-            </ul>
+          <li title="Patients">
+            <a routerLink="/" class="patients">Patients</a>
           </li>
-        </ul>
-  
-  
-      </div>
-    </div>
-  </div>
-  
-    <div class="row">
-  
-      <div class="col-md-2">
-        <section class="menu-side">
-          <ul class="menu">
-    
-            <li title="Profile">
-              <a routerLink="/doctorProfile/{{doctor.id}}" class=" active dashboard"> Profile</a>
-            </li>
-            <li title="Doctors">
-              <a routerLink="/doctorProfile/{{doctor.id}}/ddoctors" class="doctors">Doctors</a>
-            </li>
-            <li title="Patients">
-              <a routerLink="/" class="patients">Patients</a>
-            </li>
-            <li title="Add-Prescription">
-              <a routerLink="/prescription" class=" add-prescription">Add-prescription</a>
-            </li>
-            <li title="events">
-              <a routerLink="/" class="schedule">Events</a>
-            </li>
-            <li title="Appointment">
-              <a routerLink="/doctorProfile/{{doctor.id}}/calendar" class="appointment">Schedule</a>
-            </li>
-            <li title="Messages">
-              <a routerLink="/" class="messages">Messages</a>
-            </li>
-            <!-- <li title="Reports">
+          <li title="Add-Prescription">
+            <a routerLink="/prescription" class=" add-prescription">Add-prescription</a>
+          </li>
+          <li title="events">
+            <a routerLink="/" class="schedule">Events</a>
+          </li>
+          <li title="Appointment">
+            <a routerLink="/doctorProfile/{{doctor.id}}/calendar" class="appointment">Schedule</a>
+          </li>
+          <li title="Messages">
+            <a routerLink="/" class="messages">Messages</a>
+          </li>
+          <!-- <li title="Reports">
               <a href="#" class="reports">Reports</a>
             </li> -->
-    
-          </ul>
-    
-        </section>
-    
-      </div>
-      <div class="col-md-9">
-        
-        <router-outlet></router-outlet>
-      </div>
-    
+
+        </ul>
+
+      </section>
+
+    </div>
+    <div class="col-md-9">
+
+      <router-outlet></router-outlet>
     </div>
 
-
-
- 
+  </div>
+</div>

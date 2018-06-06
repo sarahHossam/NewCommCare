@@ -1,0 +1,10 @@
+.nav {
+    padding-left: 142px;
+    padding-right: 10px;
+    margin-bottom: 0;
+    list-style: none;
+    display: -webkit-inline-box;
+}
+.list-inline{
+    list-style: none;
+}
