@@ -15,7 +15,7 @@ import { MedicalHistoryModule } from '../medical-history/medical-history.module'
     MedicalHistoryModule,
     RouterModule.forChild([{path: 'patients', component: PatientsComponent, children: [
       {path: '', component: PatientListingsComponent },
-      {path: 'details', component: PatientDetailsComponent},
+      {path: 'patientdetails/:patientIndex', component: PatientDetailsComponent},
       {path: 'add', component: PatientAddComponent}
   ]}])
   ],

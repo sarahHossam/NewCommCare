@@ -9,6 +9,7 @@ import { IPatient } from '../../shared/interfaces/IPatient';
 export class PatientItemSmallComponent implements OnInit {
 
   @Input() patient: IPatient;
+  @Input() patientIndex: number;
   constructor() { }
 
   ngOnInit() {

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { IPatient } from '../interfaces/IPatient';
 
 @Injectable()
 export class PatientService {
@@ -83,4 +84,10 @@ updatePatient(id: number, firstName: string, lastName: string, age: number, DOB:
         this.patient[id].image = image;
     }
 }
+
+getById(index: number): IPatient {
+    console.log(this.patient[index]);
+    return this.patient[index];
+}
+
 }

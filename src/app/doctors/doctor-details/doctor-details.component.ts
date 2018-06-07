@@ -7,9 +7,8 @@ import { Doctorservice } from '../../shared/services/doctor.service';
   styleUrls: ['./doctor-details.component.css']
 })
 export class DoctorDetailsComponent implements OnInit {
- doctors:Idoctor;
-  constructor(private docservice:Doctorservice) { 
-    
+ doctors: Idoctor;
+  constructor(private docservice: Doctorservice) {
   }
   ngOnInit() {
   }

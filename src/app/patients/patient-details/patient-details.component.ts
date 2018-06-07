@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IPatient } from '../../shared/interfaces/IPatient';
 import { PatientService } from '../../shared/services/patient.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-patient-details',
@@ -9,12 +10,15 @@ import { PatientService } from '../../shared/services/patient.service';
 })
 export class PatientDetailsComponent implements OnInit {
 
-  patients: IPatient[] = [];
-  constructor(private _PatientService: PatientService) {
-    this.patients = this._PatientService.patient;
+  patient: IPatient;
+  patientIndex: number;
+
+  constructor(private _PatientService: PatientService, private activeLink: ActivatedRoute) {
   }
 
   ngOnInit() {
+    this.patientIndex = this.activeLink.snapshot.params['id'];
+    this.patient = this._PatientService.getById(this.patientIndex);
   }
 
 }
