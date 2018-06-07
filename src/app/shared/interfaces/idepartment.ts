@@ -1,6 +1,6 @@
 export interface Idepartment
 {
-    id:number;
+    id?:number;
     name?:string;
     briefDesc?:string;
     detailedDesc?:string;
