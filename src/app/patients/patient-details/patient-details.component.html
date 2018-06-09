@@ -9,7 +9,7 @@
 								<p>{{patient.firstName+' '+ patient.lastName}}</p>
 						</div>
 						<div class="col-md-4">
-							<a class="btn btn-primary" href="#"><img id="icon" src="./assets/img/new-24-512.png" alt="edit icon">Edit</a>
+							<a class="btn btn-primary" routerLink="./patientAdd"><img id="icon" src="./assets/img/new-24-512.png" alt="edit icon">Edit</a>
 						</div>
 					</div>
 					<hr/>
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 		<div class="col-md-9 medical">
-			
+			<app-medical-history></app-medical-history>
 		</div>
 	</div>
 </div>

@@ -9,15 +9,26 @@ import { PatientsComponent } from './patients.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MedicalHistoryModule } from '../medical-history/medical-history.module';
 
+const routesPatient: Routes = [
+  {
+    path: 'patients',
+    component: PatientsComponent,
+    children: [
+      {path: '', component: PatientListingsComponent},
+      {path: 'patientdetails/:id',
+      component: PatientDetailsComponent,
+      children: [
+        {path: 'patientAdd', component: PatientAddComponent}
+      ]},
+    ]
+  }
+];
+
 @NgModule({
   imports: [
     CommonModule,
     MedicalHistoryModule,
-    RouterModule.forChild([{path: 'patients', component: PatientsComponent, children: [
-      {path: '', component: PatientListingsComponent },
-      {path: 'patientdetails/:patientIndex', component: PatientDetailsComponent},
-      {path: 'add', component: PatientAddComponent}
-  ]}])
+    RouterModule.forRoot(routesPatient)
   ],
   exports: [
     PatientsComponent,

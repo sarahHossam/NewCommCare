@@ -46,6 +46,12 @@ hr{
     transform: scale(1,1);
 }
 
+a.btn-primary{
+    margin-left: -27px;
+    margin-top: -5px;
+
+}
+
 .medical{
     border: 1px solid lightgray;
 }
