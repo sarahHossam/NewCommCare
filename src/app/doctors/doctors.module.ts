@@ -27,8 +27,8 @@ import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-cale
     DoctorCategoryModule,
     CalendarUtilsModule,
     FormsModule,
-    CalendarModule.forRoot(),
-    NgbModalModule.forRoot(),
+    // CalendarModule.forRoot(),
+    // NgbModalModule.forRoot(),
     RouterModule.forChild([
       { path: 'doctors/:categoryname', component: DoctorListingsComponent },
       { path: 'doctors', component: DoctorListingsComponent },

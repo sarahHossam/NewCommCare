@@ -117,7 +117,7 @@
       /*#1d2654*/
       .menu li a:before {
         font-family: FontAwesome;
-        speak: none;
+       
         text-indent: 0em;
         position: absolute;
         top: 0;
