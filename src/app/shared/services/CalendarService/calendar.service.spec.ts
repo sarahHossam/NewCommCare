@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { CalendarService } from './Calendar.service';
+import { CalendarService } from './calendar.service';
 
 describe('Service: Calendar', () => {
   beforeEach(() => {
