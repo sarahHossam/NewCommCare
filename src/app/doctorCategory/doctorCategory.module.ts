@@ -5,11 +5,11 @@ import { SmallitemComponent } from './smallitem/smallitem.component';
 import { ListingAllComponent } from './listingAll/listingAll.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FilterDoctorsComponent } from './filterDoctors/filterDoctors.component';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { DragScrollModule } from 'ngx-drag-scroll';
 @NgModule({
   imports: [
     CommonModule,
-    CarouselModule.forRoot(),
+    DragScrollModule,
     RouterModule.forChild([
       {path:'categories',component:DoctorCategoryComponent},
     ])
@@ -19,6 +19,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     SmallitemComponent,
     ListingAllComponent,
     FilterDoctorsComponent
+    
 ],
   exports:[
     DoctorCategoryComponent,
@@ -26,4 +27,5 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
   ]
 
 })
-export class DoctorCategoryModule { }
+export class DoctorCategoryModule { 
+}

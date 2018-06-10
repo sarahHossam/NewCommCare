@@ -12,12 +12,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { PrescriptionComponent } from '../prescription/prescription.component';
 import { PrescriptionModule } from '../prescription/prescription.module';
 import { Component } from '@angular/core/src/metadata/directives';
+import { DoctorCategoryModule } from '../doctorCategory/doctorCategory.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FullCalendarModule,
     PrescriptionModule,
+    DoctorCategoryModule,
     RouterModule.forChild([
       { path: 'doctors/:categoryname', component: DoctorListingsComponent },
       { path: 'doctors', component: DoctorListingsComponent },

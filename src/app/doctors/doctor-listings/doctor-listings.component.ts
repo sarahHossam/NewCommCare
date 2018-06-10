@@ -5,7 +5,6 @@ import { Category } from '../../shared/interfaces/icategory';
 import { DoctorcategoryService } from '../../shared/services/doctorcategory.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-
 @Component({
   selector: 'app-doctor-listings',
   templateUrl: './doctor-listings.component.html',

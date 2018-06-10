@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+
 @Component({
   selector: 'app-doctorCategory',
   templateUrl: './doctorCategory.component.html',
@@ -6,19 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorCategoryComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+   
+   }
 
   ngOnInit() {
     
   }
-
-  public imageSources: string[] = [
-    'path to img1',
-    'path to img2',
-    'path to img3'
-   
- ];
- 
+  
+  
  
 
 }
