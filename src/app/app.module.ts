@@ -14,9 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { Doctorservice } from './shared/services/doctor.service';
 import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HospitalHomeModule } from './hospital-home/hospital-home.module';
-import { DoctorCategoryModule } from './doctorCategory/doctorCategory.module';
+
+
 
 @NgModule({
   declarations: [
@@ -24,19 +23,14 @@ import { DoctorCategoryModule } from './doctorCategory/doctorCategory.module';
     FooterComponent,
     HeaderComponent,
     
-    
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
     EventsModule,
     DepartmentsModule,
     DoctorsModule,
-    SharedModule,
-    HospitalHomeModule,
-    DoctorCategoryModule
-   
+    SharedModule
   
    ],
 

@@ -14,13 +14,13 @@ import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.compo
     DepartmentsModule,
     DoctorsModule,
     RouterModule.forRoot([
-      { path: 'home', component: HospitalHomeComponent },
-      { path: '', redirectTo: '/home', pathMatch: 'full' }
+      { path:'home', component: HospitalHomeComponent},
+      { path:'', redirectTo:'/home', pathMatch:'full'}
 
     ])
   ],
   declarations: [],
-  exports: [RouterModule]
+  exports:[ RouterModule]
 
 })
 export class AppRoutingModule { }
