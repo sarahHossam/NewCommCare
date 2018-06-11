@@ -17,12 +17,14 @@ import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HospitalHomeModule } from './hospital-home/hospital-home.module';
 import { DoctorCategoryModule } from './doctorCategory/doctorCategory.module';
+import { CarouselModule } from 'ngx-bootstrap';
+import { SystemHomeModule } from './system-home/system-home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent,
+    HeaderComponent
     
     
   ],
@@ -35,7 +37,9 @@ import { DoctorCategoryModule } from './doctorCategory/doctorCategory.module';
     DoctorsModule,
     SharedModule,
     HospitalHomeModule,
-    DoctorCategoryModule
+    DoctorCategoryModule,
+    SystemHomeModule
+    
    
   
    ],

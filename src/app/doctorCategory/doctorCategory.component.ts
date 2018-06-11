@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 @Component({
   selector: 'app-doctorCategory',
   templateUrl: './doctorCategory.component.html',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorCategoryComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  
+   }
 
   ngOnInit() {
     

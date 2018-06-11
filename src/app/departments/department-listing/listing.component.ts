@@ -12,6 +12,7 @@ export class ListingComponent implements OnInit {
 
   constructor(private deptservice:DepartmentService) { 
     this.departments=deptservice.getAll();
+  
   }
 
   ngOnInit() {
