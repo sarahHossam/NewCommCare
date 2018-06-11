@@ -1,0 +1,11 @@
+.doc-card{
+    height: 0;
+    float: left;
+}
+.docdetails{
+    margin-top:40px; 
+}
+.docdetails img{
+    margin-left: 0;
+    margin-bottom: 10px;
+}

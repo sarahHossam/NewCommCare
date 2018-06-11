@@ -9,7 +9,8 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-doctor-listings',
   templateUrl: './doctor-listings.component.html',
-  styleUrls: ['./doctor-listings.component.css']
+  styleUrls: ['./doctor-listings.component.css'],
+  host:{class:'row'}
 })
 export class DoctorListingsComponent implements OnInit {
   @Input() doctors: Idoctor[];
