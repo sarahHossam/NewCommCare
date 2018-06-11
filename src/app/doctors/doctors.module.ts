@@ -26,7 +26,7 @@ import { Component } from '@angular/core/src/metadata/directives';
         {path:'add',component:DoctorAddComponent},
         {path:'calendar', component:DoctorCalendarComponent},
         {path:'prescription', component:PrescriptionComponent},
-        {path:'prescription', component:PrescriptionComponent} 
+       
       ]},
     ])
   ],
