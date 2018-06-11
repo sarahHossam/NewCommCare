@@ -143,7 +143,7 @@ li {
 }
 
 #header .header-row {
-	display: table-row;
+	display: inline;
 	clear: both;
 }
 
@@ -257,6 +257,7 @@ li {
 	float: right;
 	margin-top: 10px;
 	margin-left: 10px;
+	margin-right: 10px;
 }
 
 #header .header-search .form-control {
@@ -268,7 +269,9 @@ li {
 	-webkit-transition: width 0.3s ease;
 	-moz-transition: width 0.3s ease;
 	transition: width 0.3s ease;
+	transform: translate3d(0,0,0);
 	-webkit-transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
@@ -353,7 +356,9 @@ html #header.header-transparent .header-body:before {
 	-webkit-transition: opacity 0.3s ease;
 	-moz-transition: opacity 0.3s ease;
 	transition: opacity 0.3s ease;
+	transform: translate3d(0,0,0);
 	-webkit-transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
@@ -410,7 +415,9 @@ html #header.header-semi-transparent .header-body:before, html #header.header-se
 	-webkit-transition: opacity 0.3s ease;
 	-moz-transition: opacity 0.3s ease;
 	transition: opacity 0.3s ease;
+	transform: translate3d(0, 0, 0);
 	-webkit-transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000px;
 	perspective: 1000px;

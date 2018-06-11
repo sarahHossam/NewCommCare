@@ -2,11 +2,13 @@
 /* _________________________________header-bar____________________________________- */
 .header-bar-dr{
     background-color: #008fe2;
-    height: 57px;
-   margin-top: 77px;
-  
-    }
-    .header-bar-dr .pages-path div{
+    min-height: 57px;
+    width: 100%;
+    margin-top: -26px;
+    position: fixed;
+    z-index: 1001;
+}
+.header-bar-dr .pages-path div{
     
         margin-left: 20px;
         font-size: 21px;
@@ -35,18 +37,7 @@
       position: relative;
       top: 3px;
     }
-    .social-links li a:hover{
-        text-decoration:none;
-    }
-    .header-bar-dr .social-links li{
-        padding-top: 10px;
-        padding-right: 10px;
-        /* border: 1px solid #dddcdc; */
-        border-radius: 50%;
-        /* background-color: #eee; */
-        cursor: pointer;
     
-    }
       .var-page{
       color: #2b2a2a !important;
       font-weight: bold;
@@ -64,14 +55,7 @@
     .right{
         margin-right: -636px;
     }
-    .header-bar-dr .social-links li span{
-    color: rgb(43, 42, 42);
-    padding-left: 10px;
-    font-size: 17px;
-    }
-    .header-bar-dr .social-links li span:hover{
-        color:#fff3f5;
-    }
+/*     
     .badgee{
     background-color: #eee;
     border-radius: 50%;
@@ -80,7 +64,7 @@
     position: relative;
     margin-left: -12px;
     top: -9px;
-    }
+    } */
     .search-header input{
       width: 20%;
     }
@@ -117,7 +101,7 @@
       /*#1d2654*/
       .menu li a:before {
         font-family: FontAwesome;
-        speak: none;
+        /* speak: none; */
         text-indent: 0em;
         position: absolute;
         top: 0;

@@ -5,7 +5,8 @@ import { Doctorservice } from '../../shared/services/doctor.service';
 @Component({
   selector: 'app-doctor-listings',
   templateUrl: './doctor-listings.component.html',
-  styleUrls: ['./doctor-listings.component.css']
+  styleUrls: ['./doctor-listings.component.css'],
+  host:{class:'row'}
 })
 export class DoctorListingsComponent implements OnInit {
   doctors:Idoctor[];
