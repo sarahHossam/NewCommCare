@@ -3,7 +3,7 @@
 .header-bar-dr{
     background-color: #008fe2;
     height: 57px;
-   margin-top: 77px;
+   margin-top: -26px;
   
     }
     .header-bar-dr .pages-path div{
@@ -117,7 +117,7 @@
       /*#1d2654*/
       .menu li a:before {
         font-family: FontAwesome;
-        speak: none;
+       
         text-indent: 0em;
         position: absolute;
         top: 0;
