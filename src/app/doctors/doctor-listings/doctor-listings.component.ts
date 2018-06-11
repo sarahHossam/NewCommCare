@@ -1,10 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Idoctor } from '../../shared/interfaces/idoctor';
 import { Doctorservice } from '../../shared/services/doctor.service';
-import { Category } from '../../shared/interfaces/icategory';
-import { DoctorcategoryService } from '../../shared/services/doctorcategory.service';
-import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-doctor-listings',
@@ -13,21 +9,12 @@ import { Observable } from 'rxjs';
   host:{class:'row'}
 })
 export class DoctorListingsComponent implements OnInit {
-  @Input() doctors: Idoctor[];
-  category: Category;
-  constructor(private docservice: Doctorservice, private activeRoute: ActivatedRoute) {
-    
+  doctors:Idoctor[];
+  constructor(private docservice:Doctorservice) { 
+    this.doctors=docservice.getAll();
   }
 
   ngOnInit() {
-    this.category = new Category();
-    this.category.categoryname = this.activeRoute.snapshot.params.categoryname;
-    if (this.category.categoryname) {
-      this.doctors = this.docservice.getBySpeciality(this.category.categoryname);
-    }
-    else {
-      this.doctors = this.docservice.getAll();
-    }
   }
 
 }

@@ -3,7 +3,8 @@
     float: left;
 }
 .docdetails{
-    margin-top:40px; 
+    margin-top:40px;
+    display: table;
 }
 .docdetails img{
     margin-left: 0;

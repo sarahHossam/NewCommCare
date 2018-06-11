@@ -6,12 +6,16 @@ import { DetailsComponent } from './department-details/details.component';
 import { AddComponent } from './department-add/add.component';
 import { DepartmentItemSmallComponent } from './department-item-small/department-item-small.component';
 import { RouterModule } from '@angular/router';
+import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild([
-      {path:"departments", component: DepartmentsComponent, children:[
+      {path:'departments', component: DepartmentsComponent, children:[
         {path:'', component: ListingComponent },
         {path:'listing', component: ListingComponent },
         {path:'details/:id',component:DetailsComponent},
@@ -24,7 +28,8 @@ import { RouterModule } from '@angular/router';
     DetailsComponent, 
     AddComponent, 
     DepartmentItemSmallComponent,
-    DepartmentsComponent
+    DepartmentsComponent,
+    SearchComponent
   ],
   exports:[
     DepartmentsComponent,

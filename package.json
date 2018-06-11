@@ -22,14 +22,11 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
-    "@ng-bootstrap/ng-bootstrap": "^2.0.0",
-    "angular-calendar": "^0.25.2",
     "bootstrap": "^4.1.1",
     "bootstrap3": "^3.3.5",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "ng-fullcalendar": "^1.5.6",
-    "ngx-bootstrap": "^3.0.0",
     "rxjs": "^6.2.0",
     "zone.js": "^0.8.26"
   },
@@ -58,5 +55,13 @@
   "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahHossam/NewCommCare.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sarahHossam/NewCommCare/issues"
+  },
+  "homepage": "https://github.com/sarahHossam/NewCommCare#readme"
 }
