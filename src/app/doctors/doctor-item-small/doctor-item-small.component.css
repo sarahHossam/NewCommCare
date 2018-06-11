@@ -1,0 +1,35 @@
+.docdetails{
+    display:inline-block;
+    width: 419px;
+    margin-right: 36px;
+    height:350px;
+   border:1px solid rgb(221, 221, 221);
+   transition: all ease 0.7s;
+  }
+   .docdetails:hover{
+    transform: scale(1.1);
+  }
+ 
+  .docdetails img{
+    width:350px;
+    height: 190px;
+    margin-bottom: 10px;
+    margin-left: -15px;
+  }
+  .docdetails .aboutdoc{
+      width: 350px;
+  }
+  .docdetails .aboutdoc h4{
+    text-transform: capitalize;
+    color:#0b3d5a;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+  .docdetails .aboutdoc .docRates{
+    margin-bottom: 13px;
+    margin-top: -10px;
+    margin-left: 60px;
+  }
+  .docdetails .aboutdoc button{
+    margin-right: 10px;
+  } 

@@ -13,8 +13,8 @@ import { PrescriptionModule } from '../prescription/prescription.module';
 import { Component } from '@angular/core/src/metadata/directives';
 import { DoctorCategoryModule } from '../doctorCategory/doctorCategory.module';
 import { FormsModule } from '@angular/forms';
-// import { CalendarModule } from 'angular-calendar';
-// import { NgbModalModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+ import { CalendarModule } from 'angular-calendar';
+import { NgbModalModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CalendarUtilsModule } from '../calendar-utils/calendar-utils.module';
 import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-calendar.component';
 
@@ -27,8 +27,8 @@ import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-cale
     DoctorCategoryModule,
     CalendarUtilsModule,
     FormsModule,
-    // CalendarModule.forRoot(),
-    // NgbModalModule.forRoot(),
+    CalendarModule.forRoot(),
+     NgbModalModule.forRoot(),
     RouterModule.forChild([
       { path: 'doctors/:categoryname', component: DoctorListingsComponent },
       { path: 'doctors', component: DoctorListingsComponent },
@@ -52,7 +52,7 @@ import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-cale
       DoctorAddComponent,
       DoctorItemSmallComponent,
       DoctorCalendarComponent,
-      EditCalendarComponent
+       EditCalendarComponent
     ],
   exports: [
     DoctorComponent,
@@ -60,8 +60,8 @@ import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-cale
     DoctorListingsComponent,
     DoctorAddComponent,
     DoctorItemSmallComponent,
-    DoctorCalendarComponent,
-    EditCalendarComponent
+     DoctorCalendarComponent,
+     EditCalendarComponent
   ],
 
 })

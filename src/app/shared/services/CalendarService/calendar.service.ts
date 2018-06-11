@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { CalendarEvent } from 'angular-calendar';
-import { startOfDay, endOfDay, subDays, addDays, endOfMonth, addHours } from 'date-fns';
+ import { CalendarEvent } from 'angular-calendar';
+ import { startOfDay, endOfDay, subDays, addDays, endOfMonth, addHours } from 'date-fns';
 import { colors } from '../../../calendar-utils/colors';
 
 @Injectable({
