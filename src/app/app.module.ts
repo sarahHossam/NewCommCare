@@ -19,17 +19,16 @@ import { HospitalHomeModule } from './hospital-home/hospital-home.module';
 import { DoctorCategoryModule } from './doctorCategory/doctorCategory.module';
 import { CalendarService } from './shared/Services/CalendarService/Calendar.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
     
-    
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
     EventsModule,
     DepartmentsModule,
@@ -37,9 +36,6 @@ import { CalendarService } from './shared/Services/CalendarService/Calendar.serv
     SharedModule,
     HospitalHomeModule,
     DoctorCategoryModule,
-    
-
-   
   
    ],
 

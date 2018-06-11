@@ -3,7 +3,7 @@
       <div class="col-md-3 pages-path">
         <div class="logo-for-dr"> Doctor
           <span>
-            <a >wall </a>
+            <a routerLink="/doctor-details/{{doctor.id}}" >wall </a>
             <span class="var-page"> / Profile </span>
           </span>
         </div>
@@ -48,50 +48,48 @@
       </div>
     </div>
   </div>
+  <div class="row">
   
-    <div class="row">
+    <div class="col-md-2">
+      <section class="menu-side">
+        <ul class="menu">
   
-      <div class="col-md-2">
-        <section class="menu-side">
-          <ul class="menu">
-    
-            <li title="Profile">
-              <a routerLink="/doctorProfile/{{doctor.id}}" class=" active dashboard"> Profile</a>
-            </li>
-            <li title="Doctors">
-              <a routerLink="/doctorProfile/{{doctor.id}}/ddoctors" class="doctors">Doctors</a>
-            </li>
-            <li title="Patients">
-              <a routerLink="/" class="patients">Patients</a>
-            </li>
-            <li title="Add-Prescription">
-              <a routerLink="/prescription" class=" add-prescription">Add-prescription</a>
-            </li>
-            <li title="events">
-              <a routerLink="/" class="schedule">Events</a>
-            </li>
-            <li title="Appointment">
-              <a routerLink="/doctorProfile/{{doctor.id}}/calendar" class="appointment">Schedule</a>
-            </li>
-            <li title="Messages">
-              <a routerLink="/" class="messages">Messages</a>
-            </li>
-            <!-- <li title="Reports">
-              <a href="#" class="reports">Reports</a>
-            </li> -->
-    
-          </ul>
-    
-        </section>
-    
-      </div>
-      <div class="col-md-9">
-        
-        <router-outlet></router-outlet>
-      </div>
-    
+          <li title="Profile">
+            <a routerLink="/profile" class=" active dashboard"> Profile</a>
+          </li>
+          <li title="Doctors">
+            <a routerLink="/doctors" class="doctors">Doctors</a>
+          </li>
+          <li title="Patients">
+            <a routerLink="/" class="patients">Patients</a>
+          </li>
+          <li title="Add-Prescription">
+            <a routerLink="/prescription" class=" add-prescription">Add-prescription</a>
+          </li>
+          <li title="events">
+            <a routerLink="/" class="schedule">Events</a>
+          </li>
+          <li title="Appointment">
+            <a routerLink="/calendar" class="appointment">Schedule</a>
+          </li>
+          <li title="Messages">
+            <a routerLink="/" class="messages">Messages</a>
+          </li>
+          <!-- <li title="Reports">
+            <a href="#" class="reports">Reports</a>
+          </li> -->
+  
+        </ul>
+  
+      </section>
+  
     </div>
-
+    <div class="col-md-9">
+      
+      <router-outlet></router-outlet>
+    </div>
+  
+  </div>
 
 
  
