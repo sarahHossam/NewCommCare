@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { InitialPhysicianAssesment } from '../../../shared/interfaces/InitialPhysicianAssesment';
 import { InitialPhysicianAssesmentService } from '../../../shared/services/MedicalHistoryService/InitialPhysicianAssesment.service';
 import { AccordionConfig } from 'ngx-bootstrap/accordion';
@@ -15,12 +15,14 @@ export function getAccordionConfig(): AccordionConfig {
 })
 export class InitialPhysicianAssesmentListingComponent implements OnInit {
 
+  @Input() patientFName: string;
+  @Input() patientLName: string;
   InitialPhysicianAssesments: InitialPhysicianAssesment[] = [];
 
   constructor(private _initialPhysicianAssesmentService: InitialPhysicianAssesmentService) { }
 
   ngOnInit() {
-    this.InitialPhysicianAssesments = this._initialPhysicianAssesmentService.InitialPhysicianAssesment;
+    this.InitialPhysicianAssesments = this._initialPhysicianAssesmentService.getListByUserName(this.patientFName, this.patientLName);
   }
 
 }

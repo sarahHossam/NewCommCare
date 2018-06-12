@@ -1,3 +1,7 @@
-<p>
-  hp-physician-progress-listing works!
-</p>
+<accordion class="center">
+  <app-hp-physician-progress-item-small
+  *ngFor="let hp of hps" 
+  [hp]="hp"
+  [index]="hps.indexOf(hp)">
+  </app-hp-physician-progress-item-small>
+</accordion>

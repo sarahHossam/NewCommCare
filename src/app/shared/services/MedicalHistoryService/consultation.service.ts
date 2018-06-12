@@ -11,7 +11,9 @@ export class ConsultationService {
             toDepartment: 'Analysis',
             fromDepartment: 'Linear Algebra',
             reasonForRequest: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
-            responseForRequest: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed'
+            responseForRequest: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
+            fName: 'Omnia',
+            lName: 'Ameer'
         },
         {
             date: '12/11/2016',
@@ -19,7 +21,9 @@ export class ConsultationService {
             toDepartment: 'Analysis',
             fromDepartment: 'Linear Algebra',
             reasonForRequest: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
-            responseForRequest: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed'
+            responseForRequest: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
+            fName: 'Omnia',
+            lName: 'Ameer'
         },
         {
             date: '20/11/2016',
@@ -27,7 +31,9 @@ export class ConsultationService {
             toDepartment: 'Analysis',
             fromDepartment: 'Linear Algebra',
             reasonForRequest: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
-            responseForRequest: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed'
+            responseForRequest: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
+            fName: 'Noor Elhoda',
+            lName: 'Ezzat'
         },
         {
             date: '25/11/2016',
@@ -35,9 +41,15 @@ export class ConsultationService {
             toDepartment: 'Analysis',
             fromDepartment: 'Linear Algebra',
             reasonForRequest: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
-            responseForRequest: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed'
+            responseForRequest: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
+            fName: 'Noor Elhoda',
+            lName: 'Ezzat'
         }
     ];
+
+    getListByUserName(fName: string, lName: string): IConsultation[] {
+        return this.consultation.filter(i => i.fName === fName , i => i.lName === lName);
+    }
 
     getConsultationById(index: number): IConsultation {
         return this.consultation[index];

@@ -5,4 +5,6 @@ export interface IHP {
     relevantFindings: string;
     activeProblems: string;
     Plan: string;
+    fName: string;
+    lName: string;
 }

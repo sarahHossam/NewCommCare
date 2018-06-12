@@ -23,24 +23,24 @@
         <div class="tab-content">
           <!--=====assesment=======-->
           <div class="tab-pane" id="tabsNavigationSimple1">
-              <app-initial-physician-assesment></app-initial-physician-assesment>
+              <app-initial-physician-assesment [patientFName]="patientFName" [patientLName]="patientLName"></app-initial-physician-assesment>
           </div>
 
           <!--===============admission============-->
           <div class="tab-pane" id="tabsNavigationSimple2">
-            <app-admission></app-admission>
+            <app-admission [patientFName]="patientFName" [patientLName]="patientLName"></app-admission>
           </div>
           <!-- ===========physician progress==============-->
           <div class="tab-pane" id="tabsNavigationSimple3">
-            <app-hp-physician-progress></app-hp-physician-progress>
+            <app-hp-physician-progress [patientFName]="patientFName" [patientLName]="patientLName"></app-hp-physician-progress>
           </div>
           <!--======================consultation================-->
           <div class="tab-pane active" id="tabsNavigationSimple4">
-            <app-consultation></app-consultation>
+            <app-consultation [patientFName]="patientFName" [patientLName]="patientLName"></app-consultation>
           </div>
           <!--==================physician sheet==========-->
           <div class="tab-pane active" id="tabsNavigationSimple5">
-            <app-physician-sheet></app-physician-sheet>
+            <app-physician-sheet [patientFName]="patientFName" [patientLName]="patientLName"></app-physician-sheet>
           </div>
         </div>
       </div>

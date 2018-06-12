@@ -10,7 +10,9 @@ export class HPService {
             Current: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
             relevantFindings: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
             activeProblems: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
-            Plan: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed'
+            Plan: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
+            fName: 'Omnia',
+            lName: 'Ameer'
         },
         {
             date: '01/01/2017',
@@ -18,7 +20,9 @@ export class HPService {
             Current: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
             relevantFindings: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
             activeProblems: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
-            Plan: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed'
+            Plan: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
+            fName: 'Omnia',
+            lName: 'Ameer'
         },
         {
             date: '02/01/2017',
@@ -26,7 +30,9 @@ export class HPService {
             Current: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
             relevantFindings: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
             activeProblems: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
-            Plan: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed'
+            Plan: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
+            fName: 'Noor Elhoda',
+            lName: 'Ezzat'
         },
         {
             date: '03/01/2017',
@@ -34,9 +40,15 @@ export class HPService {
             Current: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
             relevantFindings: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
             activeProblems: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
-            Plan: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed'
+            Plan: 'Lorem ipsum dolor sit amet, consectetur adipiscing elitsed',
+            fName: 'Noor Elhoda',
+            lName: 'Ezzat'
         }
     ];
+
+    getListByUserName(fName: string, lName: string): IHP[] {
+        return this.hp.filter(i => i.fName === fName , i => i.lName === lName);
+    }
 
     getHpById(index: number): IHP {
         return this.hp[index];

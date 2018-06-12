@@ -5,4 +5,6 @@ export interface IConsultation {
     fromDepartment: string;
     reasonForRequest: string;
     responseForRequest: string;
+    fName: string;
+    lName: string;
 }

@@ -86,7 +86,6 @@ updatePatient(id: number, firstName: string, lastName: string, age: number, DOB:
 }
 
 getById(index: number): IPatient {
-    console.log(this.patient[index]);
     return this.patient[index];
 }
 

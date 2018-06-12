@@ -12,7 +12,9 @@ export class InitialPhysicianAssesmentService {
             arrival: 'Alone',
             modeOfArrival: 'Ambulance',
             InformationObtained: 'Patient',
-            PlaceOfIncident: 'Home'
+            PlaceOfIncident: 'Home',
+            fName: 'Omnia',
+            lName: 'Ameer'
         },
         {
             date: '01/01/2017',
@@ -22,7 +24,9 @@ export class InitialPhysicianAssesmentService {
             arrival: 'Alone',
             modeOfArrival: 'Ambulance',
             InformationObtained: 'Patient',
-            PlaceOfIncident: 'Home'
+            PlaceOfIncident: 'Home',
+            fName: 'Noor Elhoda',
+            lName: 'Ezzat'
         },
         {
             date: '02/01/2017',
@@ -32,7 +36,9 @@ export class InitialPhysicianAssesmentService {
             arrival: 'Alone',
             modeOfArrival: 'Ambulance',
             InformationObtained: 'Patient',
-            PlaceOfIncident: 'Home'
+            PlaceOfIncident: 'Home',
+            fName: 'Noor Elhoda',
+            lName: 'Ezzat'
         },
         {
             date: '03/01/2017',
@@ -42,9 +48,15 @@ export class InitialPhysicianAssesmentService {
             arrival: 'Alone',
             modeOfArrival: 'Ambulance',
             InformationObtained: 'Patient',
-            PlaceOfIncident: 'Home'
+            PlaceOfIncident: 'Home',
+            fName: 'Omnia',
+            lName: 'Ameer'
         }
     ];
+
+    getListByUserName(fName: string, lName: string): InitialPhysicianAssesment[] {
+        return this.InitialPhysicianAssesment.filter(i => i.fName === fName , i => i.lName === lName);
+    }
 
     getInitialPhysicianAssesmentById(index: number): InitialPhysicianAssesment {
         return this.InitialPhysicianAssesment[index];

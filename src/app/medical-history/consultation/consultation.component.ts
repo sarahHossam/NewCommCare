@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-consultation',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./consultation.component.css']
 })
 export class ConsultationComponent implements OnInit {
+
+  @Input() patientFName: string;
+  @Input() patientLName: string;
 
   constructor() { }
 

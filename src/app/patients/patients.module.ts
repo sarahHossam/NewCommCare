@@ -8,6 +8,8 @@ import { PatientListingsComponent } from './patient-listings/patient-listings.co
 import { PatientsComponent } from './patients.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MedicalHistoryModule } from '../medical-history/medical-history.module';
+import { FormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap';
 
 const routesPatient: Routes = [
   {
@@ -26,9 +28,11 @@ const routesPatient: Routes = [
 
 @NgModule({
   imports: [
+    FormsModule,
     CommonModule,
     MedicalHistoryModule,
-    RouterModule.forRoot(routesPatient)
+    RouterModule.forRoot(routesPatient),
+    ModalModule.forRoot()
   ],
   exports: [
     PatientsComponent,

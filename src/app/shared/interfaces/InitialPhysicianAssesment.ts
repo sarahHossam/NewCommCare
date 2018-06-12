@@ -7,4 +7,6 @@ export interface InitialPhysicianAssesment {
     modeOfArrival: string;
     InformationObtained: string;
     PlaceOfIncident: string;
+    fName: string;
+    lName: string;
 }

@@ -32,10 +32,6 @@ div#row{
     margin-top: 15px;
 }
 
-div#row button{
-    margin: -4px 0px 0px -20px
-}
-
 hr{
     margin-top: 0px;
 }
@@ -46,7 +42,7 @@ hr{
     transform: scale(1,1);
 }
 
-a.btn-primary{
+button.btn-primary{
     margin-left: -27px;
     margin-top: -5px;
 

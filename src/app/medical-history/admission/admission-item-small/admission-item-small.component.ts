@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IAdmission } from '../../../shared/interfaces/IAdmission';
 
 @Component({
   selector: 'app-admission-item-small',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admission-item-small.component.css']
 })
 export class AdmissionItemSmallComponent implements OnInit {
+
+  @Input() admission: IAdmission;
+  @Input() index: number;
 
   constructor() { }
 

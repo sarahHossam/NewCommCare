@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IHP } from '../../../shared/interfaces/IHp';
+import { HPService } from '../../../shared/services/MedicalHistoryService/hp.service';
 
 @Component({
   selector: 'app-hp-physician-progress-details',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HpPhysicianProgressDetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input() index: number;
+  hp: IHP;
+
+  constructor(private _HPService: HPService) { }
 
   ngOnInit() {
+    this.hp = this._HPService.getHpById(this.index);
   }
 
 }

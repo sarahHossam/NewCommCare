@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-initial-physician-assesment',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./initial-physician-assesment.component.css']
 })
 export class InitialPhysicianAssesmentComponent implements OnInit {
+
+  @Input() patientFName: string;
+  @Input() patientLName: string;
 
   constructor() { }
 

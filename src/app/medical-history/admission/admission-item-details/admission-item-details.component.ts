@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IAdmission } from '../../../shared/interfaces/IAdmission';
+import { AdmissionService } from '../../../shared/services/MedicalHistoryService/admission.service';
 
 @Component({
   selector: 'app-admission-item-details',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdmissionItemDetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input() index: number;
+  admission: IAdmission;
+
+  constructor(private _AdmissionService: AdmissionService) { }
 
   ngOnInit() {
+    this.admission = this._AdmissionService.getAdmissionById(this.index);
   }
 
 }
